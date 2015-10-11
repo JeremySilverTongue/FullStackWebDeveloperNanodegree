@@ -1,0 +1,16 @@
+[
+    {
+        "title" : "Mad Max",
+        "storyline" : "I wanna die historic on the fury road.",
+        "poster_image_url" : "http://ia.media-imdb.com/images/M/MV5BMTUyMTE0ODcxNF5BMl5BanBnXkFtZTgwODE4NDQzNTE@._V1_SX640_SY720_.jpg",
+        "trailer_youtube_url" : "https://www.youtube.com/watch?v=hEJnMQG9ev8",
+        "rating" :"8 Cylinders"
+    },
+    {
+        "title" : "The Martian",
+        "storyline" : "Space piracy. MATT DAAAAAAAAMON.",
+        "poster_image_url" : "http://ia.media-imdb.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_SX640_SY720_.jpg",
+        "trailer_youtube_url" : "https://www.youtube.com/watch?v=ej3ioOneTy8",
+        "rating" :"1000 Potatoes"
+    }
+]

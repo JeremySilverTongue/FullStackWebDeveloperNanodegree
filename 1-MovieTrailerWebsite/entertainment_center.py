@@ -1,18 +1,20 @@
-import media
+import Movie
 import fresh_tomatoes
 
-mad_max = media.Movie("Mad Max", "I wanna die historic on the fury road.",
-    "http://ia.media-imdb.com/images/M/MV5BMTUyMTE0ODcxNF5BMl5BanBnXkFtZTgwODE4NDQzNTE@._V1_SX640_SY720_.jpg",
-    "https://www.youtube.com/watch?v=hEJnMQG9ev8",
-    " 8 Cylinders"
-    )
+import simplejson
 
-the_martian = media.Movie("The Martian", "Space piracy. MATT DAAAAAAAAMON",
-    "http://ia.media-imdb.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_SX640_SY720_.jpg",
-    "https://www.youtube.com/watch?v=ej3ioOneTy8",
-    "1000 Potatoes"
-    )
+MOVIES_FILE = "movies.json"
 
+def main():
+    with open(MOVIES_FILE) as data_file:
 
-movies = [mad_max, the_martian]
-fresh_tomatoes.open_movies_page(movies)
+        # Load JSON data as standard (non unicode) strings.
+        movie_data = simplejson.loads(data_file.read())
+
+        # Inflate live Movies from the dicts created from the JSON.
+        # Note use of dict unpacking.
+        movies = [Movie.Movie(**movie) for movie in movie_data]
+        fresh_tomatoes.open_movies_page(movies)
+
+if __name__ == '__main__':
+    main()
