@@ -5,6 +5,7 @@ import simplejson
 
 MOVIES_FILE = "movies.json"
 
+
 def main():
     with open(MOVIES_FILE) as data_file:
 
